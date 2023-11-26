@@ -6,12 +6,13 @@
 
 body {
   background-color: #f3ebe4;
-  position: relative;
-  height: 100vh;
+  height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
 p {
@@ -63,10 +64,7 @@ h1 {
     background-color: fffff;
     border-radius: 8px;
     overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -260px 0 0 -350px;
+    margin-top: 100px;
   }
 
   #preview-card__image {
@@ -121,9 +119,9 @@ i {
 
 .attribution { 
   text-align: center;
+  position: absolute;
   margin-top: auto;
   bottom: 0;
-  margin-left: 00px;
  }
 
 .attribution a { color: hsl(228, 45%, 44%); }
