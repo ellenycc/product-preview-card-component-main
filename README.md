@@ -12,7 +12,7 @@ Users should be able to:
 ### Screenshot
 
 ![screenshot-desktop](/images/solution-desktop.png)
-![screenshot-mobile](/images/image-product-mobile.jpg)
+![screenshot-mobile](/images/solution-mobile.png)
 
 ### Links
 
