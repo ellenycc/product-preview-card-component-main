@@ -1,5 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f3ebe4;
+  position: relative;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 p {
@@ -41,28 +53,42 @@ h1 {
   display: inline-block;
 }
 
-.preview-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: white;
-  max-width: 700px;
-  max-height: 520px;
-  background-color: fffff;
-  margin: 120px auto 100px auto;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-@media (max-width: 600px) {
+@media (min-width: 800px) {
   .preview-card {
-    background-color: blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    max-width: 700px;
+    max-height: 520px;
+    background-color: fffff;
+    border-radius: 8px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -260px 0 0 -350px;
+  }
+
+  #preview-card__image {
+    width: 350px;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
-#preview-card__image {
-  width: 350px;
-  height: 100%;
-  object-fit: cover;
+@media (max-width: 800px) {
+  .preview-card {
+    background-color: white;
+    margin: 2em;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  #preview-card__image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
 }
 
 .preview-card__text {
@@ -82,13 +108,23 @@ button {
   width: 100%;
   background-color: #364835;
   border-style: none;
-  border-radius: 8px; 
+  border-radius: 8px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 i {
   margin-right: 0.75em;
 }
 
-.attribution > p {
-  display: inline-block;
-}
+.attribution { 
+  text-align: center;
+  margin-top: auto;
+  bottom: 0;
+  margin-left: 00px;
+ }
+
+.attribution a { color: hsl(228, 45%, 44%); }
+.attribution > p { display: inline-block; }
